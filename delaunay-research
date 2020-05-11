@@ -1,0 +1,8 @@
+import numpy as np
+points = np.random.rand(70, 2)
+from scipy.spatial import Delaunay
+tri = Delaunay(points)
+import matplotlib.pyplot as plt
+plt.triplot(points[:,0], points[:,1], tri.simplices)
+plt.plot(points[:,0], points[:,1], 'o')
+plt.show()
